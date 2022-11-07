@@ -1,0 +1,801 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/* I'm giving a base font-size of 62.5% which equals to 10px. Therefore, 1em = 10px. This will allow a simpler calculation of font-sizes, and provide a better user interactivity on different devices and being user friendly. */
+
+html {
+  font-size: 62.5%;
+  color: black;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 100;
+  line-height: 2;
+}
+
+body {
+  min-width: 320px;
+  font-size: 1.2em;
+}
+
+:root {
+  --blue-color: rgb(52, 116, 212);
+}
+/* GENERAL CODE */
+
+ul {
+  list-style: none;
+}
+
+nav > div.navBar,
+ul,
+main,
+main section,
+.freshFarm,
+.containerTwo,
+.fruitVeggBox,
+.veggieBox,
+.fruitBooster,
+.recipesImages {
+  display: flex;
+}
+
+nav > div.navBar,
+ul,
+main section {
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+a:hover {
+  border-bottom: 2px solid rgb(252, 122, 0);
+}
+
+img {
+  object-fit: cover;
+}
+
+h2 {
+  text-align: center;
+  padding-bottom: 40px;
+}
+/* Font sizes */
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+li {
+  font-size: 1.4rem;
+}
+
+input,
+button {
+  font-size: 1.2rem;
+}
+
+/* MEDIA QUERY */
+
+/* Mobile */
+
+@media only screen and (min-width: 320px) {
+  nav li {
+    visibility: hidden;
+  }
+
+  body {
+    width: 100%;
+    margin: 0 0 0 0;
+  }
+
+  main {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* Tablet */
+
+@media only screen and (min-width: 600px) {
+  nav li {
+    visibility: visible;
+  }
+}
+
+/* Laptop */
+
+@media only screen and (min-width: 800px) {
+  nav li {
+    visibility: visible;
+  }
+}
+
+/* NAV BAR */
+
+.navBar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 0;
+  background-color: rgba(220, 221, 227, 0.377);
+}
+
+.navBar:hover {
+  background-color: rgba(220, 221, 227, 0.712);
+}
+
+h1 {
+  margin-right: 40px;
+  font-weight: bold;
+}
+
+ul.account {
+  margin-left: 10%;
+}
+
+ul.webPath {
+  margin-right: 10%;
+}
+
+li {
+  margin-left: 10px;
+}
+
+.howItWorksSection,
+.boxSizes,
+.boxDescription,
+.wasteFoodSection,
+.localFarms,
+.recipes,
+.contactUs,
+.extraInfo {
+  height: 100%;
+  padding: 80px 60px;
+}
+
+input {
+  caret-color: var(--blue-color);
+}
+
+/* MAIN SECTION */
+
+main {
+  background: url("https://images.unsplash.com/photo-1498408040764-ab6eb772a145?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2344&q=80");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 0px -100px;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+}
+
+section.container {
+  padding: 10% 5%;
+}
+
+main .sectionOne {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+}
+
+main h2 {
+  padding-bottom: 5%;
+}
+
+main p {
+  padding-bottom: 20px;
+}
+
+main span {
+  padding-bottom: 20px;
+  font-weight: 800;
+}
+
+main input {
+  height: 30px;
+  width: 150px;
+  padding: 5px;
+  text-align: center;
+}
+
+main .inputBox {
+  border: 1px solid rgb(252, 122, 0);
+}
+
+main .buttonSearch {
+  height: 30px;
+  width: 120px;
+  padding: 5px;
+  text-align: center;
+  margin-left: -1%;
+  border: 1px solid rgb(252, 122, 0);
+  color: rgb(252, 122, 0);
+  font-size: 1.2rem;
+  font-weight: 900;
+  background: none;
+  cursor: pointer;
+}
+
+main .buttonSearch:hover {
+  color: white;
+  background-color: rgb(252, 122, 0);
+}
+
+/* HOW IT WORKS SECTION */
+
+.howItWorksSection h2 {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.howItWorks {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  text-align: center;
+  padding: 30px 0 30px 0;
+}
+
+.orderProcess {
+  margin: 0 10px;
+  width: 400px;
+}
+
+.orderProcess img {
+  height: 100px;
+  width: 100px;
+}
+
+.orderProcess h4 {
+  padding-bottom: 20px;
+}
+
+.learnMore {
+  text-align: center;
+  display: block;
+  padding-top: 30px;
+}
+
+.howItWorksSection a {
+  margin-top: 30px;
+  border: 1px solid rgb(252, 122, 0);
+  padding: 5px;
+  color: rgb(252, 122, 0);
+  font-size: 1.2rem;
+  font-weight: 900;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.howItWorksSection a:hover {
+  color: white;
+  background-color: rgb(252, 122, 0);
+}
+
+/* BOX SELECTION SECTION */
+
+/* BOX SECTION */
+
+.boxSizes {
+  background-image: url("https://images.unsplash.com/photo-1511735643442-503bb3bd348a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2532&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+div.containerTwo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 600px;
+  margin: 0 auto;
+}
+
+.boxSizes h2 {
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+.box {
+  width: 300px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(220, 221, 227, 0.438);
+}
+
+.boxColumn:hover {
+  background-color: rgba(220, 221, 227, 0.877);
+}
+
+.box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+h3 {
+  padding-bottom: 30px;
+}
+
+.getStarted {
+  padding-top: 20px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: inline;
+}
+
+.getStarted a {
+  margin-top: 30px;
+  border: 1px solid rgb(252, 122, 0);
+  padding: 5px;
+  color: rgb(252, 122, 0);
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.getStarted a:hover {
+  color: white;
+  background-color: rgb(252, 122, 0);
+}
+
+/* Fruit and veggie boxes */
+
+div.boxDescription > p {
+  width: 40%;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+.boxDescription > h2 {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.fruitVeggBox,
+.veggieBox,
+.fruitBooster {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.fruitVeggContainer,
+.veggieContainer,
+.fruitContainer {
+  margin: 0 10px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 20px;
+
+  background: rgb(170, 220, 242);
+  background: linear-gradient(
+    162deg,
+    rgba(170, 220, 242, 1) 0%,
+    rgba(233, 227, 148, 0.5984987745098039) 100%
+  );
+}
+
+.fruitVeggContainer:hover,
+.veggieContainer:hover,
+.fruitContainer:hover {
+  background: rgb(170, 220, 242);
+  background: linear-gradient(
+    162deg,
+    rgba(170, 220, 242, 1) 0%,
+    rgba(233, 227, 148, 1) 100%
+  );
+}
+
+.fruitVeggContainer span,
+.veggieContainer span,
+.fruitContainer span {
+  margin-top: 20px;
+}
+
+.getStartedA {
+  margin: 30px 0 10px 0;
+}
+
+.getStartedA a {
+  border: 1px solid rgb(252, 122, 0);
+  padding: 5px 10px;
+  color: rgb(252, 122, 0);
+}
+
+.getStartedA a:hover {
+  color: white;
+  background: rgb(252, 122, 0);
+}
+
+.fruitVeggBox {
+  background-image: url("https://images.unsplash.com/photo-1606757389667-45c2024f9fa4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+  background-position: 0px -200px;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+/* Veggie boxes */
+
+.veggieBox {
+  background-image: url("https://images.unsplash.com/photo-1587334207407-deb137a955ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80");
+  background-position: 0px -650px;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+/* Fruit booster */
+
+.boxDescriptionFruit {
+  grid-template-columns: minmax(200px, 60%) minmax(150px, 40%);
+}
+
+.fruitBooster {
+  justify-content: center;
+  text-align: center;
+  background-image: url("https://images.unsplash.com/photo-1568966299181-bb7282cc84f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
+  background-position: -100px -300px;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.fruitContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* ABOUT US */
+
+.wasteFoodSection {
+  width: 100%;
+  padding: 80px 0;
+}
+
+.wasteFoodSection h2 {
+  text-align: left;
+  padding-bottom: 40px;
+  color: white;
+}
+
+.foodWaste {
+  background-image: url("https://images.unsplash.com/photo-1571161933267-9a16444371ed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80");
+  background-repeat: no-repeat;
+  background-size: auto;
+  display: grid;
+  grid-template-columns: minmax(200px, 60%) minmax(150px, 40%);
+}
+
+.foodWasteText {
+  padding: 10px;
+  margin: 40px 60px 40px 20px;
+}
+
+.foodWasteText p {
+  margin-bottom: 20px;
+  color: white;
+}
+
+.foodWasteText > a {
+  border: 1px solid rgb(252, 122, 0);
+  padding: 5px 10px;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.foodWasteText > a:hover {
+  color: white;
+  background-color: rgb(252, 122, 0);
+}
+
+.tonsWasteFood {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Local Farms images */
+
+.localFarms,
+.recipes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  text-align: center;
+  padding-top: 0;
+}
+
+.localFarms {
+  margin-bottom: 60px;
+}
+
+.localFarms p,
+.recipes p {
+  padding-bottom: 40px;
+}
+
+.freshFarm,
+.recipesImages {
+  justify-content: space-around;
+  margin: 0 50px;
+}
+
+.freshFarm img,
+.recipesImages img {
+  width: 300px;
+  height: 200px;
+}
+
+/* RECIPES */
+
+.recipes h3 {
+  margin-top: 40px;
+}
+
+.recipes a {
+  border: 1px solid rgb(252, 122, 0);
+  padding: 5px 10px;
+  color: rgb(252, 122, 0);
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.recipes a:hover {
+  color: white;
+  background-color: rgb(252, 122, 0);
+}
+
+.selectRecipes {
+  margin: 0 auto 30px auto;
+  display: flex;
+}
+
+.selectRecipes a {
+  font-size: 1.4rem;
+  padding: 5px 10px;
+}
+
+li > a.lunchOrange {
+  color: white;
+  background-color: rgb(252, 122, 0);
+}
+
+/* COSTUMER REVIEWS */
+
+.costumerReviewDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.costumerReview img {
+  width: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.fiveStar {
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.fiveStar img {
+  width: 30px;
+}
+
+.johnSmithOne {
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+
+.johnSmithTwo {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.johnSmithReview {
+  width: 350px;
+  text-align: center;
+}
+
+/* .reviewScroll {
+  display: flex;
+  justify-content: space-between;
+}
+
+.otherReviews {
+  margin: 200px
+} */
+
+/* CONTACT US */
+
+.contactUs {
+  padding-top: 20px;
+  margin-top: 60px;
+  background-color: #7bd4ff;
+  background-image: linear-gradient(360deg, #7bd4ff 0%, #e8fcff 100%);
+}
+
+.contactUsDiv {
+  margin: 0 40px;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: minmax(200px, 50%) minmax(200px, 50%);
+}
+
+.contactUsDiv img {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.contactPhone,
+.contactEmail {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.contactPhone p,
+.contactEmail p {
+  font-size: 2.2rem;
+}
+
+.newsletter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.6rem;
+}
+
+.newsletterInput {
+  font-size: 1.3rem;
+  padding: 5px 10px;
+  width: 140px;
+  border: 2px solid rgb(252, 122, 0);
+}
+
+.newsletterButton {
+  margin-left: -2%;
+  width: 165px;
+  background: none;
+  color: rgb(252, 122, 0);
+  border: 2px solid rgb(252, 122, 0);
+  cursor: pointer;
+}
+
+.newsletterButton:hover {
+  background: rgb(252, 122, 0);
+  color: white;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #7bd4ff;
+  background-image: linear-gradient(180deg, #7bd4ff 0%, #e8fcff 100%);
+}
+
+.footerBoxes {
+  display: flex;
+}
+
+.footerList {
+  display: flex;
+  margin: 0 100px;
+  padding: 40px 10px;
+  height: 200px;
+  width: 160px;
+}
+
+.footerList ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.footerList li {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+p.registered {
+  text-align: center;
+  padding: 20px 0;
+  font-weight: 600;
+  color: rgb(252, 122, 0);
+  border-top: 1px solid rgb(252, 122, 0);
+}
+
+footer a {
+  color: black;
+  font-weight: 600;
+}
+
+.socialMedia {
+  width: 200px;
+  height: 120px;
+  text-align: center;
+  position: relative;
+  left: 18%;
+}
+
+.socialMedia p {
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgb(252, 122, 0);
+}
+
+.socialMedia img {
+  width: 30px;
+  margin: 10px;
+}
+
+.bioFood {
+  position: relative;
+  left: 48%;
+}
+
+.bioFood img {
+  width: 130px;
+}
